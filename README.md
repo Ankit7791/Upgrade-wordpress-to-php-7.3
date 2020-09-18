@@ -37,3 +37,12 @@ First things first, if you are able to login into wp-admin try updating wordpres
 	So, function __construct(){
 	   //this will the be the new constructor function now	
 	}
+	
+	If still the above issue persists than, goto wp-includes > functions.php
+		 * @param bool $trigger Whether to trigger the error for deprecated functions. Default true.
+	 */
+	if ( WP_DEBUG && apply_filters( 'deprecated_constructor_trigger_error', true ) ) 
+	
+	change the if condition to 
+	
+	if ( WP_DEBUG && apply_filters( 'deprecated_constructor_trigger_error', false ) ) 
