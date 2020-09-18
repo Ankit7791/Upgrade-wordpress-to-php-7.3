@@ -1,6 +1,8 @@
 # Upgrade-wordpress-to-php-7.3
 Possible warning and errors to be solved when migrating from lower version of php to 7.3
 
+First things first, if you are able to login into wp-admin try updating wordpress and plugins to newer version which will reduce the error solving..
+
 # issue 1
 	Deprecated: Function create_function() is deprecated in functions/theme-functions.php on line 604
 
