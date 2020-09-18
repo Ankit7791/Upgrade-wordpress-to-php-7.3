@@ -46,3 +46,32 @@ First things first, if you are able to login into wp-admin try updating wordpres
 	change the if condition to 
 	
 	if ( WP_DEBUG && apply_filters( 'deprecated_constructor_trigger_error', false ) ) 
+	
+# issue 3
+	Fatal error: Uncaught Error: [] operator not supported for strings
+	
+	You can fix this PHP error by first initializing $data[] as an array:
+
+	$data = [];
+	$data[] = '<script type="text/javascript">' . NL;
+
+	A second method is to use the older style using array():
+
+	$data = array();
+	$data[] = '<script type="text/javascript">' . NL;
+	
+	Old Code
+	
+	$section_style 		= '';
+	$section_style[] 	= 'padding-top:'. intval( $section['attr']['padding_top'] ) .'px';
+	$section_style[] 	= 'padding-bottom:'. intval( $section['attr']['padding_bottom'] ) .'px';
+	$section_style[] 	= 'background-color:'. $section['attr']['bg_color'];
+	
+	New Code
+	
+	$section_style 		= []; or array();
+	$section_style[] 	= 'padding-top:'. intval( $section['attr']['padding_top'] ) .'px';
+	$section_style[] 	= 'padding-bottom:'. intval( $section['attr']['padding_bottom'] ) .'px';
+	$section_style[] 	= 'background-color:'. $section['attr']['bg_color'];
+	
+	Solution link : https://www.saotn.org/fatal-error-operator-not-supported-strings-php-71/
