@@ -2,7 +2,7 @@
 Possible warning and errors to be solved when migrating from lower version of php to 7.3
 
 # issue 1
-Deprecated: Function create_function() is deprecated in functions/theme-functions.php on line 604
+	Deprecated: Function create_function() is deprecated in functions/theme-functions.php on line 604
 
 	Old Line
 	add_filter( 'loop_shop_columns', create_function( false, 'return 3;' ) );
@@ -16,4 +16,4 @@ Deprecated: Function create_function() is deprecated in functions/theme-function
 	New Line
 	add_filter( 'loop_shop_per_page', function($cols) {return 12;}, 20);
 
-# solution link : https://stackoverflow.com/questions/50181382/deprecated-function-create-function-is-deprecated-php-7-2
+	# solution link : https://stackoverflow.com/questions/50181382/deprecated-function-create-function-is-deprecated-php-7-2
