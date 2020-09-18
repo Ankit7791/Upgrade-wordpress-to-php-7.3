@@ -8,7 +8,7 @@ Possible warning and errors to be solved when migrating from lower version of ph
 	add_filter( 'loop_shop_columns', create_function( false, 'return 3;' ) );
 
 	New Line
-	add_filter( 'loop_shop_columns', function(false) {return 3;});
+	add_filter( 'loop_shop_columns', function() {return 3;});
 
 	Old Line
 	add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
